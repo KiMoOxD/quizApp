@@ -10,6 +10,8 @@ $(function() {
         url: "./js/Qs.json",
         dataType: "json",
         contentType: 'multipart/form-data',
+        cache: false,
+	    headers: { "cache-control": "no-cache" },
         success: function (res) {
             console.log(res)
             response = res;
