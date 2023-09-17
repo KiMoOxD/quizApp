@@ -1,0 +1,50 @@
+[
+    {
+        "question":"What is my name ?",
+        "a":"kimo",
+        "b":"mohamed",
+        "c":"ahmed",
+        "d":"mostafa",
+        "answer":"a"
+    },
+    {
+        "question":"What is my age ?",
+        "a":"19",
+        "b":"20",
+        "c":"50",
+        "d":"251",
+        "answer":"d"
+    },
+    {
+        "question":"What is my color ?",
+        "a":"white",
+        "b":"black",
+        "c":"nigga",
+        "d":"nibba",
+        "answer":"c"
+    },
+    {
+        "question":"What is my fav car ?",
+        "a":"kia",
+        "b":"toyota",
+        "c":"bmw",
+        "d":"race",
+        "answer":"c"
+    },
+    {
+        "question":"What is my gender ?",
+        "a":"male",
+        "b":"female",
+        "c":"corissont",
+        "d":"cat",
+        "answer":"a"
+    },
+    {
+        "question":"What is my origin ?",
+        "a":"egyption",
+        "b":"italian",
+        "c":"korean",
+        "d":"american",
+        "answer":"a"
+    }
+]

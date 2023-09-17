@@ -1,0 +1,115 @@
+
+.ans {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.ans span {
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    padding: 15px;
+    cursor: pointer;
+    margin: 0;
+}
+
+.ans .ans-cont {
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ans .ans-cont::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0px;
+    background: rgb(5, 255, 238);
+    transition: 0.3s;
+}
+
+.ans .ans-cont:hover::before {
+    width: 100%;
+}
+
+.info {
+    background: white;
+    padding: 20px;
+}
+
+.info .correct,
+.info .wrong {
+    font-size: 20px;
+    position: relative;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    padding: 5px;
+    flex: 2;
+}
+
+.info .correct::before {
+    position: absolute;
+    content: "\f00c";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 20px;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #43a047;
+}
+
+.info .wrong::before {
+    position: absolute;
+    content: "\f00d";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 20px;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #d32f2f;
+}
+
+.info .prog-cont {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: #eeeeee7c;
+    transition: 0.3s;
+}
+
+.info .prog {
+    height: 20px;
+    background: #479d4c;
+    display: inline-block;
+}
+
+.question {
+    font-size: 20px;
+}
+
+
+.full {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 243, 214);
+    display: none;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
