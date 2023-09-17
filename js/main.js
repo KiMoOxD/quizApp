@@ -8,6 +8,7 @@ $(function() {
         type: "GET",
         url: "./js/Qs.json",
         dataType: "json",
+        contentType: 'multipart/form-data',
         success: function (res) {
             console.log(res)
             response = res;
