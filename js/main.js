@@ -4,6 +4,7 @@ let response = [];
 
 
 $(function() {
+    $.ajaxSetup({ cache: false });
     $.ajax({
         type: "GET",
         url: "./js/Qs.json",
