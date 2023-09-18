@@ -3,21 +3,15 @@ let response = [];
 
 
 
-$(function() {
-    $.ajax({
-        type: "GET",
-        url: "./js/Qs.json",
-        dataType: "json",
-        success: function (res) {
-            console.log(res)
-            response = res;
-            len = response.length;
-                //loadQ(c);
-                shuf(response)
+const xhttp = new XMLHttpRequest();
 
-        }
-    });
-
+// Define a callback function
+xhttp.onload = function() {
+    response = JSON.parse(this.responseText);
+    len = response.length;
+    
+    //loadQ(c);
+    shuf(response)
 
     document.body.addEventListener('click', function(e) {
         if(e.target.classList.contains('ans')) {
@@ -41,8 +35,52 @@ $(function() {
         }
     })
 
+}
+
+xhttp.open("GET", "./js/Qs.json");
+xhttp.send();
+
+
+// $(function() {
+//     $.ajax({
+//         type: "GET",
+//         url: "./js/Qs.json",
+//         dataType: "json",
+//         success: function (res) {
+//             console.log(res)
+//             response = res;
+//             len = response.length;
+//                 //loadQ(c);
+//                 shuf(response)
+
+//         }
+//     });
+
+
+//     document.body.addEventListener('click', function(e) {
+//         if(e.target.classList.contains('ans')) {
+//             curr++;
+//             document.querySelector('.prog').style.cssText = `width: ${curr/len * 100}%`
+
+//             if (e.target.getAttribute('name') == correct) {
+//                 crrct++;
+//                 c++;
+//                 document.querySelector('.correct').textContent = crrct;
+//                     //loadQ(c);
+//                     shuf(response)
+//             } else {
+//                 wrng++
+//                 c++;
+//                 document.querySelector('.wrong').textContent = wrng;
+//                     //loadQ(c);
+//                     shuf(response)
+//             }
+
+//         }
+//     })
+
     
-})
+// })
 
 
 function shuf(arr) {
